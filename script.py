@@ -1,7 +1,9 @@
-import pywhatkit as kit #updateing sendwhatmsg_instantly with double click
+#import pywhatkit as kit #updateing sendwhatmsg_instantly with double click
 import keyboard
 import time
 import csv
+
+import pywhatkit as kit
 
 with open("./prova.csv", newline="", encoding="utf-8") as f:
     csv_reader = csv.reader(f, delimiter=";")
@@ -15,8 +17,8 @@ with open("./prova.csv", newline="", encoding="utf-8") as f:
             number = row[0]
             if number != "":
                 text = """Ciao :-P"""
-                kit.sendwhatmsg_instantly("+39"+number, text, 15, True, 4)
-                time.sleep(10)
+                kit.sendwhatmsg_instantly("+39"+number, text, 15, True, 10)
+                #time.sleep(10)
                 line_count += 1
     print(f"Processed {line_count} lines.")
 
