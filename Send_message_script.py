@@ -32,9 +32,9 @@ class Send_message_script():
                         old = '{'+self.column_name[i]+'}'
                         new = str(row[i])
                         txt = txt.replace(old, new)
-                    kit.sendwhatmsg_instantly("+39"+row[number], txt, 15, True, 4)
-                    time.sleep(10)
-                    keyboard.press_and_release("ctrl+w")
+                    kit.sendwhatmsg_instantly("+39"+row[number], txt, 15, True, close_time=10)
+                    #time.sleep(10)
+                    #keyboard.press_and_release("ctrl+w")
                     #self.error_list.append('; '.join(row))
                 else:
                     self.error_list.append('; '.join(row))
